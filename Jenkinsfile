@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    node {
+      label 'fedora_slave'
+    }
+
+  }
   stages {
     stage('Checkout') {
       steps {
